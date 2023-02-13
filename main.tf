@@ -67,7 +67,7 @@ resource "aws_instance" "ansible_server" {
     Name = "Ansible Server"
   }
 
-  provisioner "remote-exec" { #A
+  provisioner "remote-exec" {
     inline = [
       "sudo apt update -y",
       "sudo apt install -y software-properties-common",
@@ -83,7 +83,7 @@ resource "aws_instance" "ansible_server" {
     }
   }
   
-  provisioner "local-exec" { #B
+  provisioner "local-exec" { 
     command = "ansible-playbook -u ubuntu --key-file ansible-key.pem -T 300 -i '${self.public_ip},', app.yml" 
   }
 }
