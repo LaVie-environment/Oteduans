@@ -1,0 +1,38 @@
+# Local .terraform directories
+**/.terraform/*
+.terraform
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Ignore override files as they are usually used to overirde resources locally and so are not checked in
+override.tf
+overrride.tf.json
+*_override.tf
+*_override.tf.json
+
+
+# Ansible runtime and backups
+*.original
+*.tmp
+*.bkp
+*.retry
+*.*~
+
+# Tower runtime roles
+roles/**
+!roles/requirements.yml
+
+# Exclude all binaries
+*.bin
+*.jar
+*.tar 
+*.zip
+*.gzip
+*.tgz
